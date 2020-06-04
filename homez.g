@@ -1,6 +1,6 @@
 ; homez.g
 ; called to home the Z axis
-
+T-0
 M98 P/macros/Coupler - Unlock	;Open Coupler
 
 G91 				; Relative mode

@@ -77,25 +77,25 @@ M950 H4 C"duex.e3heat" T4                                       ; create nozzle 
 M307 H4 B0 S1.00 						; disable bang-bang mode for heater  and set PWM limit
 
 ; Fans
-M950 F0 C"null" Q500                                            	; create fan 0 on pin fan0 and set its frequency
-M950 F1 C"fan1" Q500                                            ; create fan 1 on pin fan1 and set its frequency
-M950 F2 C"fan2" Q500                                            ; create fan 2 on pin fan2 and set its frequency
-M950 F3 C"duex.fan3" Q500                                       ; create fan 3 on pin duex.fan3 and set its frequency
-M950 F4 C"duex.fan4" Q500                                       ; create fan 4 on pin duex.fan4 and set its frequency
-M950 F5 C"duex.fan5" Q500                                       ; create fan 5 on pin duex.fan5 and set its frequency
-M950 F6 C"duex.fan6" Q500                                       ; create fan 6 on pin duex.fan6 and set its frequency
-M950 F7 C"duex.fan7" Q500                                       ; create fan 7 on pin duex.fan7 and set its frequency
-M950 F7 C"duex.fan7" Q500                                       ; create fan 7 on pin duex.fan7 and set its frequency
-M950 F8 C"duex.fan8" Q500                                       ; create fan 8 on pin duex.fan8 and set its frequency
-M106 P0 H-1                                                 	; set fan 0 value. Thermostatic control is turned off
-M106 P1 H1 T45                                              	; set fan 1 value. Thermostatic control is turned on
-M106 P2 H-1                                                 	; set fan 2 value. Thermostatic control is turned off
-M106 P3 H2 T45                                              	; set fan 3 value. Thermostatic control is turned on
-M106 P4 H-1                                                 	; set fan 4 value. Thermostatic control is turned off
-M106 P5 H3 T45                                              	; set fan 5 value. Thermostatic control is turned on
-M106 P6 H-1                                                 	; set fan 6 value. Thermostatic control is turned off
-M106 P7 H4 T45                                               	; set fan 7 value. Thermostatic control is turned on
-M106 P8 H-1                                            		    ; set fan 8 value. Thermostatic control is turned off
+;M950 F0 C"null" Q500                                           ; create fan 0 on pin fan0 and set its frequency
+M950 F4 C"fan1" Q500 ;T0 cooling fan                            ; create fan 1 on pin fan1 and set its frequency
+M950 F0 C"fan2" Q500 ;T0 part cooling fan, fan 0                ; create fan 2 on pin fan2 and set its frequency
+M950 F5 C"duex.fan3" Q500 ;T1 cooling fan                       ; create fan 3 on pin duex.fan3 and set its frequency
+M950 F1 C"duex.fan4" Q500 ;T1 part cooling fan, fan 1           ; create fan 4 on pin duex.fan4 and set its frequency
+M950 F6 C"duex.fan5" Q500 ;T2 cooling fan                       ; create fan 5 on pin duex.fan5 and set its frequency
+M950 F2 C"duex.fan6" Q500 ;T2 part cooling fan, fan 2           ; create fan 6 on pin duex.fan6 and set its frequency
+M950 F7 C"duex.fan7" Q500 ;T2 cooling fan                       ; create fan 7 on pin duex.fan7 and set its frequency
+M950 F3 C"duex.fan8" Q500 ;T3 part cooling fan, fan 3           ; create fan 8 on pin duex.fan8 and set its frequency
+;M106 P0 H-1                                                 	; set fan 0 value. Thermostatic control is turned off
+M106 P4 H1 T45 ;T0 cooling fan                                  ; set fan 1 value. Thermostatic control is turned on
+M106 P0 H-1                                                 	; set fan 2 value. Thermostatic control is turned off
+M106 P5 H2 T45 ;T1 cooling fan                                  ; set fan 3 value. Thermostatic control is turned on
+M106 P1 H-1                                                 	; set fan 4 value. Thermostatic control is turned off
+M106 P6 H3 T45 ;T2 cooling fan                                  ; set fan 5 value. Thermostatic control is turned on
+M106 P2 H-1                                                 	; set fan 6 value. Thermostatic control is turned off
+M106 P7 H4 T45 ;T3 cooling fan                                  ; set fan 7 value. Thermostatic control is turned on
+M106 P3 H-1                                            		    ; set fan 8 value. Thermostatic control is turned off
+                                          		  
 
 ; Tools
 M563 P0 S"T0" D0 H1 					; Define tool 0
